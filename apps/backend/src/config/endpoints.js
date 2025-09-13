@@ -1,4 +1,4 @@
 export const endpoint =
-  process.env.NODE_ENV === 'production'
-    ? 'https://contacto-fullstack-lunes.onrender.com'
-    : 'http://localhost:3000';
+  process.env.NODE_ENV === 'dev'
+    ? 'http://localhost:4321'
+    : 'https://contacto-fullstack-lunes.onrender.com';

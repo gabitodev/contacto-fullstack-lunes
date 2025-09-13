@@ -14,9 +14,9 @@ export const prerender = false
 <script>
   // @ts-nocheck
   import ky from 'ky';
+  import { BACK_ENDPOINT } from '../../config/endpoints';
   const token = window.location.pathname.split('/verify/')[1];
   const verifyText = document.querySelector('#verify-text');
- import { BACK_ENDPOINT } from '../../config/endpoints';
   try {
     const data = await ky.patch(`${BACK_ENDPOINT}/api/users/verify`, {json: {token}}).json();
     verifyText.innerHTML = data.message;
